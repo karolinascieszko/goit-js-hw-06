@@ -11,6 +11,12 @@ let number = parseInt(dataLength);
 
 textInput.addEventListener("blur", () => {
 
- textInput.value.length === number ? textInput.classList.add("valid") : textInput.classList.add("invalid"); 
+    textInput.value.length === number ? textInput.classList.add("valid").remove("invalid") : textInput.classList.add("invalid");
+
+});
+
+textInput.addEventListener("click", () => {
+
+    textInput.classList.remove("invalid");
 
 });
