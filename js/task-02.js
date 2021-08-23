@@ -12,12 +12,12 @@ const qs = (selector) => document.querySelector(selector);
 const list = qs("#ingredients");
 console.log(list);
 
- ingredients.forEach((n,i) => {
+ ingredients.forEach(element => {
   let ingredientsElement = document.createElement("li");
-  ingredientsElement.textContent = `${ingredients[i]}`;
-  ingredientsElement.classList.add('item');
+  ingredientsElement.textContent = element;
+   ingredientsElement.classList.add("item");
+   list.append(ingredientsElement);
   console.log(ingredientsElement);
-  list.after(ingredientsElement);
 })
 
 
