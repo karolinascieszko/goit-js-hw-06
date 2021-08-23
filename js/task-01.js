@@ -5,7 +5,6 @@ const qsa = (selector) => document.querySelectorAll(selector);
 const items = qsa("li.item");
 
 console.log(`Numbers of categories: ${items.length}`);
-console.log(items);
     [...items].forEach((item) => {
     console.log(`Category: ${item.children[0].textContent}`);
     console.log(`Elements: ${item.children[1].children.length}`);
